@@ -1,0 +1,26 @@
+class SelectionSort
+  def asc_order(numbers)
+    index = 0
+    # indexの値が要素数-1より小さい間繰り返す
+    while index < numbers.size - 1
+      # jは現在のindexより上のindexすべて
+      j = (index+1)..numbers.size
+      # 最小値のindexを取得
+      min_index = numbers.index(numbers[j].min)
+      # numbers[index]よりnumbers[min_index]小さい時
+      if numbers[index] > numbers[min_index]
+        # 要素を入れ替える
+        # hold_valueにnumbers[index]の値を保存
+        hold_value = numbers[index]
+        # numbers[index]にnumbers[min_index]の値を代入
+        numbers[index] = numbers[min_index]
+        # numbers[min_index]にhold_valueに保持していた値を代入
+        numbers[min_index] = hold_value
+      end
+      # indexを1増やす
+      index += 1
+    end
+    # 並べ替えた配列を返す
+    numbers
+  end
+end
