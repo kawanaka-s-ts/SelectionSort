@@ -3,10 +3,10 @@ class SelectionSort
     index = 0
     # indexの値が要素数-1より小さい間繰り返す
     while index < numbers.size - 1
-      # jは現在のindexより上のindexすべて
-      j = (index+1)..numbers.size
+      # rangeは現在のindexより上のindexすべて
+      range = (index + 1)..numbers.size
       # 最小値のindexを取得
-      min_index = numbers.index(min_search(numbers[j]))
+      min_index = numbers.index(min_search(numbers[range]))
       # numbers[index]よりnumbers[min_index]小さい時
       if numbers[index] > numbers[min_index]
         # 要素を入れ替える
@@ -26,7 +26,7 @@ class SelectionSort
 
   def min_search(numbers)
     # iはindex
-    i = 0
+    i = 1
     # minは最小値
     # 配列の最初の数値を仮の最小値としてminに代入
     min = numbers[0]
