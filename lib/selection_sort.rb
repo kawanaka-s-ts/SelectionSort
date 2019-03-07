@@ -2,8 +2,8 @@ class SelectionSort
   def asc_order(numbers)
     # indexに0を代入する
     index = 0
-    # indexの値が要素数より小さい間繰り返す
-    while index < numbers.size
+    # indexの値が要素数-1より小さい間繰り返す
+    while index < numbers.size - 1
       # min_indexは最小値のindex
       # numbers[index]を仮の最小値とする
       # indexを代入
